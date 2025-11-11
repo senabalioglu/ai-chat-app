@@ -2,6 +2,8 @@ using ChatApp.Data;
 using ChatApp.Services;
 using Microsoft.EntityFrameworkCore;
 
+Environment.SetEnvironmentVariable("ASPNETCORE_URLS", "http://*:8080");
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
