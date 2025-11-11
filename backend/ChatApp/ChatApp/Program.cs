@@ -28,7 +28,10 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowFrontend", policy =>
     {
         policy
-            .WithOrigins("http://localhost:5173", "https://ai-chat-app-api.onrender.com", "http://ai-chat-app-api.onrender.com")
+            .WithOrigins(
+                "http://localhost:5173",
+                "https://ai-chat-app-frontend.onrender.com"
+            )
             .AllowAnyHeader()
             .AllowAnyMethod()
             .AllowCredentials();
@@ -43,6 +46,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseRouting();
 
 //app.UseHttpsRedirection();
 
