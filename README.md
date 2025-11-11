@@ -1,13 +1,8 @@
 ---
-title: Sentiment Analysis
-emoji: 🐠
-colorFrom: pink
-colorTo: red
-sdk: gradio
-sdk_version: 5.49.1
+title: sentiment-analysis
 app_file: app.py
-pinned: false
-license: mit
+sdk: gradio
+sdk_version: 3.44.4
 ---
 
 Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
