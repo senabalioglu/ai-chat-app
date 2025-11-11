@@ -11,5 +11,17 @@ namespace ChatApp.Data
         }
 
         public DbSet<Message> Messages { get; set; }
+        public DbSet<User> Users { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Message>(entity =>
+            {
+                entity.HasOne(m => m.User)
+                      .WithMany(u => u.Messages)
+                      .HasForeignKey(m => m.UserId)
+                      .OnDelete(DeleteBehavior.Cascade);
+            });
+        }
     }
 }

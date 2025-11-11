@@ -1,5 +1,7 @@
-﻿using ChatApp.Data;
+﻿using Azure.Core;
+using ChatApp.Data;
 using ChatApp.Models;
+using ChatApp.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,31 +11,46 @@ namespace ChatApp.Controllers
     [ApiController]
     public class MessagesController : ControllerBase
     {
-        private readonly AppDbContext _context;
-        public MessagesController( AppDbContext context )
+        //private readonly AppDbContext _context;
+        private readonly AnalyzeService _analyzeService;
+
+        public MessagesController( AppDbContext context, AnalyzeService analyzeService )
         {
-            _context = context; 
+            //_context = context; 
+            _analyzeService = analyzeService;
         }
 
-        [HttpGet]
-        public IActionResult GetAll() 
+        public class AnalyzeRequest
         {
-            var messages = _context.Messages.ToList();
+            public Guid UserId { get; set; }
+            public string Text { get; set; } = null!;
+        }
+
+        [HttpPost("analyze")]
+        public async Task<IActionResult> Analyze([FromBody] AnalyzeRequest request)
+        {
+            if (string.IsNullOrWhiteSpace(request.Text))
+            {
+                return BadRequest("Text is required.");
+            }
+
+            var message = await _analyzeService.AnalyzeSentimentAsync(request.UserId, request.Text);
+            return Ok(message);
+        }
+
+        [HttpGet("${userId}")]
+        public async Task<IActionResult> GetForUser(Guid userId)
+        {
+            var messages = await _analyzeService.GetMessagesForUserAsync(userId);
             return Ok(messages);
         }
 
-        [HttpPost("Send")]
-        public IActionResult SendMessage() 
+        [HttpGet("all")]
+        public async Task<IActionResult> GetAllMessages()
         {
-            var message = new Message()
-            {
-                Text = "Message tests",
-                Sentiment = "negative"
-            };
-
-            _context.Messages.Add(message);
-            _context.SaveChanges();
-            return Ok(message);
+            var messages = await _analyzeService.GetAllMessagesAsync();
+            return Ok(messages);
         }
+
     }
 }

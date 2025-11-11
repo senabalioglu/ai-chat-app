@@ -1,8 +1,24 @@
 [
   {
     "ContainingType": "ChatApp.Controllers.MessagesController",
-    "Method": "GetAll",
-    "RelativePath": "api/Messages",
+    "Method": "GetForUser",
+    "RelativePath": "api/Messages/${userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ChatApp.Controllers.MessagesController",
+    "Method": "GetAllMessages",
+    "RelativePath": "api/Messages/all",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -11,12 +27,44 @@
   },
   {
     "ContainingType": "ChatApp.Controllers.MessagesController",
-    "Method": "SendMessage",
-    "RelativePath": "api/Messages/Send",
+    "Method": "Analyze",
+    "RelativePath": "api/Messages/analyze",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ChatApp.Controllers.MessagesController\u002BAnalyzeRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ChatApp.Controllers.UserController",
+    "Method": "GetAll",
+    "RelativePath": "api/User",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ChatApp.Controllers.UserController",
+    "Method": "Login",
+    "RelativePath": "api/User/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "nickname",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   }
 ]

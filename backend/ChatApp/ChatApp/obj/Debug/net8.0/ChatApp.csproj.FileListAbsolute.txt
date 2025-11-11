@@ -129,7 +129,6 @@ C:\Users\senab\gitbum\ai-chat-app\backend\ChatApp\ChatApp\obj\Debug\net8.0\ChatA
 C:\Users\senab\gitbum\ai-chat-app\backend\ChatApp\ChatApp\obj\Debug\net8.0\ChatApp.csproj.CoreCompileInputs.cache
 C:\Users\senab\gitbum\ai-chat-app\backend\ChatApp\ChatApp\obj\Debug\net8.0\ChatApp.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\senab\gitbum\ai-chat-app\backend\ChatApp\ChatApp\obj\Debug\net8.0\ChatApp.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\senab\gitbum\ai-chat-app\backend\ChatApp\ChatApp\obj\Debug\net8.0\ChatApp.sourcelink.json
 C:\Users\senab\gitbum\ai-chat-app\backend\ChatApp\ChatApp\obj\Debug\net8.0\rjimswa.dswa.cache.json
 C:\Users\senab\gitbum\ai-chat-app\backend\ChatApp\ChatApp\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
 C:\Users\senab\gitbum\ai-chat-app\backend\ChatApp\ChatApp\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
@@ -138,7 +137,6 @@ C:\Users\senab\gitbum\ai-chat-app\backend\ChatApp\ChatApp\obj\Debug\net8.0\stati
 C:\Users\senab\gitbum\ai-chat-app\backend\ChatApp\ChatApp\obj\Debug\net8.0\staticwebassets.build.json.cache
 C:\Users\senab\gitbum\ai-chat-app\backend\ChatApp\ChatApp\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\senab\gitbum\ai-chat-app\backend\ChatApp\ChatApp\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-C:\Users\senab\gitbum\ai-chat-app\backend\ChatApp\ChatApp\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\senab\gitbum\ai-chat-app\backend\ChatApp\ChatApp\obj\Debug\net8.0\ChatApp.csproj.Up2Date
 C:\Users\senab\gitbum\ai-chat-app\backend\ChatApp\ChatApp\obj\Debug\net8.0\ChatApp.dll
 C:\Users\senab\gitbum\ai-chat-app\backend\ChatApp\ChatApp\obj\Debug\net8.0\refint\ChatApp.dll
@@ -170,3 +168,7 @@ C:\Users\senab\gitbum\ai-chat-app\backend\ChatApp\ChatApp\bin\Debug\net8.0\runti
 C:\Users\senab\gitbum\ai-chat-app\backend\ChatApp\ChatApp\bin\Debug\net8.0\runtimes\win-arm64\native\e_sqlite3.dll
 C:\Users\senab\gitbum\ai-chat-app\backend\ChatApp\ChatApp\bin\Debug\net8.0\runtimes\win-x64\native\e_sqlite3.dll
 C:\Users\senab\gitbum\ai-chat-app\backend\ChatApp\ChatApp\bin\Debug\net8.0\runtimes\win-x86\native\e_sqlite3.dll
+C:\Users\senab\gitbum\ai-chat-app\backend\ChatApp\ChatApp\bin\Debug\net8.0\HtmlAgilityPack.dll
+C:\Users\senab\gitbum\ai-chat-app\backend\ChatApp\ChatApp\bin\Debug\net8.0\BCrypt.Net-Next.dll
+C:\Users\senab\gitbum\ai-chat-app\backend\ChatApp\ChatApp\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\senab\gitbum\ai-chat-app\backend\ChatApp\ChatApp\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
