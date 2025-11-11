@@ -2,6 +2,6 @@ services:
   - type: web
     name: ai-chat-app-api
     env: docker
-    rootDir: backend/ChatApp/ChatApp
-    plan: free
+    rootDir: backend/ChatApp
     dockerfilePath: backend/ChatApp/ChatApp/Dockerfile
+    plan: free
