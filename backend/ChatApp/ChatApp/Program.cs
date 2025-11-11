@@ -25,34 +25,20 @@ builder.Services.AddScoped<AnalyzeService>();
 
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowFrontend", policy =>
-    {
-        policy
-            .WithOrigins(
-                "http://localhost:5173",
-                "https://ai-chat-app-frontend.onrender.com",
-                "https://ai-chat-app-api.onrender.com"
-            )
-            .AllowAnyHeader()
-            .AllowAnyMethod()
-            .AllowCredentials();
-    });
+    options.AddPolicy("AllowReactApp",
+        policy =>
+        {
+            policy.WithOrigins("http://localhost:5173")
+                  .AllowAnyHeader()
+                  .AllowAnyMethod();
+        });
 });
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+app.UseCors("AllowReactApp");
 
-app.UseRouting();
-
-//app.UseHttpsRedirection();
-
-app.UseCors("AllowFrontend");
+app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
