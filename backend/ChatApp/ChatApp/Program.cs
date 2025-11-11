@@ -13,16 +13,12 @@ builder.Services.AddCors(options =>
         policy
             .WithOrigins(
                 "http://localhost:5173",
-                "https://ai-chat-app.onrender.com"
+                "https://ai-chat-app.onrender.com",
+                "https://ai-chat-869r52hf4-senabalioglus-projects.vercel.app"
             )
             .AllowAnyHeader()
             .AllowAnyMethod();
     });
-});
-
-builder.WebHost.ConfigureKestrel(options =>
-{
-    options.ListenAnyIP(8080);
 });
 
 // Add services to the container.
