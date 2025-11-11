@@ -6,6 +6,20 @@ Environment.SetEnvironmentVariable("ASPNETCORE_URLS", "http://*:8080");
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowSpecificOrigins", policy =>
+    {
+        policy
+            .WithOrigins(
+                "http://localhost:5173",
+                "https://ai-chat-app.onrender.com"
+            )
+            .AllowAnyHeader()
+            .AllowAnyMethod();
+    });
+});
+
 builder.WebHost.ConfigureKestrel(options =>
 {
     options.ListenAnyIP(8080);
@@ -23,22 +37,11 @@ builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlite(builder
 builder.Services.AddHttpClient<AnalyzeService>();
 builder.Services.AddScoped<AnalyzeService>();
 
-builder.Services.AddCors(options =>
-{
-    options.AddPolicy("AllowReactApp",
-        policy =>
-        {
-            policy.WithOrigins("http://localhost:5173")
-                  .AllowAnyHeader()
-                  .AllowAnyMethod();
-        });
-});
-
 var app = builder.Build();
 
-app.UseCors("AllowReactApp");
+app.UseCors("AllowSpecificOrigins");
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
