@@ -1,0 +1,10 @@
+.btn {
+  background-color: rgb(172, 172, 172);
+  border: none;
+  padding: 10px 25px;
+  font-family: "Poppins", sans-serif;
+  font-size: medium;
+  border-radius: 10px;
+  font-weight: bold;
+  border: 2px solid black;
+}

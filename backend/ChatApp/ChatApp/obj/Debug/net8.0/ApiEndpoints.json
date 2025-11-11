@@ -1,0 +1,22 @@
+[
+  {
+    "ContainingType": "ChatApp.Controllers.MessagesController",
+    "Method": "GetAll",
+    "RelativePath": "api/Messages",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ChatApp.Controllers.MessagesController",
+    "Method": "SendMessage",
+    "RelativePath": "api/Messages/Send",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]
