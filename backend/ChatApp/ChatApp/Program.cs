@@ -10,15 +10,13 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowSpecificOrigins", policy =>
     {
-        policy
-            .WithOrigins(
-                "http://localhost:5173",
-                "https://ai-chat-app.onrender.com",
-                "https://ai-chat-869r52hf4-senabalioglus-projects.vercel.app"
-            )
-            .AllowAnyHeader()
-            .AllowAnyMethod()
-            .AllowCredentials();
+        policy.WithOrigins(
+            "https://ai-chat-869r52hf4-senabalioglus-projects.vercel.app",
+            "https://ai-chat-app-two-bay.vercel.app",
+            "http://localhost:5173"
+        )
+        .AllowAnyHeader()
+        .AllowAnyMethod();
     });
 });
 
