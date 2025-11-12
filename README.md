@@ -83,7 +83,7 @@ SQLite veritabanı, `User` ve `Message` arasında **one–to-many (1-N)** ilişk
 - Kullanıcı login ekranı → nickname ile giriş  
 - Ana ekran → mesaj listesi + anlık duygu sonucu + mesaj gönderme girdisi  
 - API entegrasyonu  
-- Deploy: [Vercel Demo Linki](https://ai-chat-869r52hf4-senabalioglus-projects.vercel.app)
+- Deploy: [Vercel Demo Linki](https://ai-chat-app-two-bay.vercel.app/)
 
 ---
 
@@ -128,7 +128,7 @@ npx react-native run-android
 ---
 
 ## 🔗 Canlı Bağlantılar
-- **Web (Vercel):** [https://ai-chat-869r52hf4-senabalioglus-projects.vercel.app](https://ai-chat-869r52hf4-senabalioglus-projects.vercel.app)
+- **Web (Vercel):** [https://ai-chat-869r52hf4-senabalioglus-projects.vercel.app](https://ai-chat-app-two-bay.vercel.app/)
 - **API (Render):** [https://ai-chat-app-api.onrender.com/api](https://ai-chat-app-api.onrender.com/api)
 - **AI Servisi (Hugging Face):** [https://sihirlipaspas-sentiment-analyzer.hf.space](https://sihirlipaspas-sentiment-analyzer.hf.space)
 
