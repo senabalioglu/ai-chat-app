@@ -9,10 +9,17 @@ function Home({ currentUser }) {
   const bottomRef = useRef(null);
 
   useEffect(() => {
-    fetch(`${apiUrl}/Messages/all`)
+    const fetchMessages = async () => {
+      fetch(`${apiUrl}/Messages/all`)
       .then((res) => res.json())
       .then((data) => setMessages(data))
       .catch((err) => console.log(err));
+    };
+
+    fetchMessages();
+
+    const interval = setInterval(fetchMessages, 2000);
+    return () => clearInterval(interval);
   }, []);
 
   useEffect(() => {
