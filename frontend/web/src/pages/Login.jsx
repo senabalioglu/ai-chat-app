@@ -38,6 +38,9 @@ function Login({ setIsLoggedIn, setCurrentUser }) {
   return (
     <div style={{ textAlign: "center" }}>
       <input
+        style={{
+          color: 'aliceblue',
+        }}
         type="text"
         placeholder="Enter nickname..."
         value={nickname}
