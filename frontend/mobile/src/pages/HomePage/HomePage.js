@@ -8,12 +8,17 @@ function HomePage ({currentUser}){
     const apiUrl = 'https://ai-chat-app-api.onrender.com/api';
     const [messages, setMessages] = useState([]);
 
-
     useEffect(() => {
-        fetch(`${apiUrl}/Messages/all`)
-        .then((res) => res.json())
-        .then((data) => setMessages(data))
-        .catch((err) => console.log(err));
+        const fetchMessages = async () => {
+          fetch(`${apiUrl}/Messages/all`)
+          .then((res) => res.json())
+          .then((data) => setMessages(data))
+          .catch((err) => console.log(err));
+        };
+
+        fetchMessages();
+        const interval = setInterval(fetchMessages, 2000);
+        return () => clearInterval(interval);
     },[]);
 
     const handleSend = async (text) => {
