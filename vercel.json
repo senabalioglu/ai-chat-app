@@ -1,5 +1,0 @@
-{
-  "buildCommand": "cd ./frontend/web && npm ci && npm run build",
-  "outputDirectory": "frontend/web/dist",
-  "framework": "vite"
-}
