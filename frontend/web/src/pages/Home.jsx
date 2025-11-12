@@ -51,9 +51,8 @@ function Home({ currentUser }) {
   };
 
   return (
-    <>
+    <div className="page-wrapper">
       <h1>Hoş geldin, {currentUser?.nickname} 👋</h1>
-      {/*<h2> {currentUser.id} </h2>*/}
       <div className="container">
         {messages.map((message) => (
           <MessageBox
@@ -62,10 +61,10 @@ function Home({ currentUser }) {
             messageData={message}
           />
         ))}
-        <div ref={bottomRef} /> {/* 👈 buraya */}
+        <div ref={bottomRef} />
       </div>
       <ChatInput onSend={handleSend} />
-    </>
+    </div>
   );
 }
 

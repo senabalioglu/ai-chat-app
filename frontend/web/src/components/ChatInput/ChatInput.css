@@ -1,8 +1,5 @@
 .input-container {
   background-color: aliceblue;
-  padding: 10px 20px;
-  margin: 20px;
-  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -15,7 +12,7 @@
 }
 
 input {
-  flex: 1;
+  
   border: none;
   outline: none;
   background-color: transparent;
@@ -23,15 +20,4 @@ input {
   font-size: large;
   padding: 10px;
   height: 40px;
-}
-
-button {
-  margin-left: 10px;
-  height: 40px;
-  padding: 0 20px;
-  border-radius: 8px;
-  border: 1px solid #333;
-  background-color: #ccc;
-  font-weight: bold;
-  cursor: pointer;
 }
