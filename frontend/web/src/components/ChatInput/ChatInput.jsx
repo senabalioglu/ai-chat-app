@@ -17,7 +17,7 @@ const ChatInput = ({onSend}) => {
   return (
     <div className="input-container">
       <form onSubmit={handleSubmit} >
-        <input style={{color: 'white'}} id="text" placeholder="Type something..." value={text} onChange={(e) => setText(e.target.value)} />
+        <input id="text" placeholder="Type something..." value={text} onChange={(e) => setText(e.target.value)} />
         <SendButton />
       </form>
     </div>
