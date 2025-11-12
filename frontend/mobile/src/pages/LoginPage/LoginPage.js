@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View, Text, TextInput, Button} from 'react-native';
+import {View, Text, TextInput, Button, TouchableOpacity} from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import styles from './LoginPage.styles';
 
@@ -35,21 +35,35 @@ export default function LoginPage({onLoginSuccess}) {
   };
 
   return (
-    <View style={styles.main} >
-      <Text>Login Screen</Text>
-      <TextInput
-        placeholder="Nickname"
-        value={nickname}
-        onChangeText={setNickname}
+    <View style={styles.main}>
+      <Text style={{color: 'aliceblue', fontWeight: 'bold', fontSize: 30}}>
+        Login Screen
+      </Text>
+      <View style={{backgroundColor: 'aliceblue', margin: 20, borderRadius: 10, padding: 5}}>
+        <TextInput
+          placeholder="Nickname"
+          value={nickname}
+          onChangeText={setNickname}
+          style={{
+            width: 200,
+            padding: 8,
+            borderWidth: 1,
+            borderColor: '#ccc',
+            marginVertical: 10,
+            borderColor: 'aliceblue',
+          }}
+        />
+      </View>
+      <TouchableOpacity
         style={{
-          width: 200,
-          padding: 8,
-          borderWidth: 1,
-          borderColor: '#ccc',
-          marginVertical: 10,
+          backgroundColor: '#575757ff',
+          borderRadius: 5,
+          paddingVertical: 8,
+          paddingHorizontal: 16,
         }}
-      />
-      <Button title="Login" onPress={handleLogin} />
+        onPress={handleLogin}>
+        <Text style={{ color: 'aliceblue', fontWeight: 'bold', fontSize: 20 }} > Login </Text>
+      </TouchableOpacity>
     </View>
   );
 }

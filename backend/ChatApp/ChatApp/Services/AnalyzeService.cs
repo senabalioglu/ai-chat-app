@@ -80,7 +80,8 @@ namespace ChatApp.Services
                 Text = m.Text,
                 Sentiment = m.Sentiment,
                 CreationDate = m.CreationDate,
-                UserId = m.UserId
+                UserId = m.UserId,
+                Nickname = m.User.Nickname
             })
             .ToListAsync();
 
