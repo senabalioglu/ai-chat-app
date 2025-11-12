@@ -46,7 +46,7 @@ function Login({ setIsLoggedIn, setCurrentUser }) {
         value={nickname}
         onChange={(e) => setNickname(e.target.value)}
       />
-      <button onClick={handleLogin}>Giriş Yap</button>
+      <button onClick={handleLogin}>Login</button>
     </div>
   );
 }

@@ -59,7 +59,7 @@ function Home({ currentUser }) {
 
   return (
     <div className="page-wrapper">
-      <h1>Hoş geldin, {currentUser?.nickname} ✨</h1>
+      <h1>Welcome, {currentUser?.nickname} ✨</h1>
       <div className="container">
         {messages.map((message) => (
           <MessageBox
