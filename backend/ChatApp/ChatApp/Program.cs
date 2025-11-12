@@ -17,7 +17,8 @@ builder.Services.AddCors(options =>
                 "https://ai-chat-869r52hf4-senabalioglus-projects.vercel.app"
             )
             .AllowAnyHeader()
-            .AllowAnyMethod();
+            .AllowAnyMethod()
+            .AllowCredentials();
     });
 });
 
@@ -37,7 +38,7 @@ var app = builder.Build();
 
 app.UseCors("AllowSpecificOrigins");
 
-//app.UseHttpsRedirection();
+app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
