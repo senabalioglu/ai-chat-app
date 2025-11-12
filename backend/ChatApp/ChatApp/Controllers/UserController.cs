@@ -31,19 +31,23 @@ namespace ChatApp.Controllers
                 return BadRequest("Nickname cannot be empty");
             }
 
-            var user = await _context.Users.FirstOrDefaultAsync(n => n.Nickname == nickname);
+            var existingUser = await _context.Users.FirstOrDefaultAsync(u => u.Nickname == nickname);
 
-            if (user == null) 
+            if (existingUser != null) 
             {
-                user = new User
-                {
-                    Nickname = nickname,
-                };
-                _context.Add(user);
-                await _context.SaveChangesAsync();
+                return Ok(existingUser);
             }
 
-            return Ok(user);
+            var newUser = new User
+            {
+                Id = Guid.NewGuid(),
+                Nickname = nickname.Trim()
+            };
+
+            _context.Users.Add(newUser);
+            await _context.SaveChangesAsync();
+
+            return Ok(newUser);
         }
 
         /*

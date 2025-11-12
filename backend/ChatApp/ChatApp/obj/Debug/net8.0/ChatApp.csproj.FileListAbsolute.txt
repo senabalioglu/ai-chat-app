@@ -172,3 +172,4 @@ C:\Users\senab\gitbum\ai-chat-app\backend\ChatApp\ChatApp\bin\Debug\net8.0\HtmlA
 C:\Users\senab\gitbum\ai-chat-app\backend\ChatApp\ChatApp\bin\Debug\net8.0\BCrypt.Net-Next.dll
 C:\Users\senab\gitbum\ai-chat-app\backend\ChatApp\ChatApp\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\senab\gitbum\ai-chat-app\backend\ChatApp\ChatApp\obj\Debug\net8.0\ChatApp.sourcelink.json
+C:\Users\senab\gitbum\ai-chat-app\backend\ChatApp\ChatApp\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
