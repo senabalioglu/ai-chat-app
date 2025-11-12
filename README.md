@@ -96,7 +96,7 @@ SQLite veritabanı, `User` ve `Message` arasında **one–to-many (1-N)** ilişk
 > `ChatInput` bileşeninde AI yardımı, işlevsellik kazandırmak için kullanılmıştır.  
 > Stil ve veri akışı (`state management`, `useEffect`, `fetch`) tarafı manuel uygulanmıştır.
 
-- APK: [Android APK İndir](https://drive.google.com/uc?id=1tbL_3Rmcuf3S3X4jdeIYSudK2cYg_zj9&export=download)
+- APK: [Android APK İndir](https://github.com/senabalioglu/ai-chat-app/releases/download/v1.0.0/app-release.apk)
 
 ## 🧪 Kurulum Adımları
 ### Backend
